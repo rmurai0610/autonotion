@@ -1,7 +1,7 @@
 name: Notion Daily Generator
 on:
   schedule:
-    - cron: "40 * * * *" # run at 1am UTC
+    - cron: "*/5 * * * *" # run at 1am UTC
   workflow_dispatch:
 jobs:
   notion-daily-generator:
