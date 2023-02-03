@@ -1,0 +1,17 @@
+{
+  "name": "notion-autoadd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.3",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3"
+  }
+}
