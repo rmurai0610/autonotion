@@ -1,0 +1,20 @@
+name: Notion Daily Generator
+on:
+  schedule:
+    - cron: "1 0 * * *" # run at 1am UTC
+  workflow_dispatch:
+jobs:
+  notion-daily-generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - run: npm ci
+      - run: npm run deploy
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTES_DATABASE_ID: ${{ secrets.NOTES_DATABASE_ID }}
+          HABITS_DATABASE_ID: ${{ secrets.HABITS_DATABASE_ID }}
