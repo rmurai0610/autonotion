@@ -16,5 +16,5 @@ jobs:
       - run: npm run deploy
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTES_DATABASE_ID: ${{ secrets.NOTES_DATABASE_ID }}
-          HABITS_DATABASE_ID: ${{ secrets.HABITS_DATABASE_ID }}
+          NOTES_DATABASE_ID: ${{ secrets.NOTION_API_HABITS_DATABASE }}
+          HABITS_DATABASE_ID: ${{ secrets.NOTION_API_NOTES_DATABASE }}
